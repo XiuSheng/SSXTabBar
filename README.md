@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SSXTabBar.svg?style=flat)](https://cocoapods.org/pods/SSXTabBar)
 
 ## Example
-![](http://chuantu.biz/t6/318/1527073856x-1404793459.gif)[]!
+![](http://chuantu.biz/t6/318/1527073856x-1404793459.gif)
 
 ## Requirements
 
