@@ -1,0 +1,6 @@
+framework module SSXTabBar {
+  umbrella header "SSXTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

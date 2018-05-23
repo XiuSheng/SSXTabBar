@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'SSXTabBar_Example' do
+  pod 'SSXTabBar', :path => '../'
+
+  target 'SSXTabBar_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'FBSnapshotTestCase'
+    pod 'Expecta+Snapshots'
+  end
+end
