@@ -23,11 +23,7 @@
     NSMutableArray *navArr = [[NSMutableArray alloc] initWithCapacity:titleArr.count];
     for (int i = 0; i<titleArr.count; i++) {
         UIViewController *vc;
-        if (i>=4) {
-            vc = [[SSXViewController alloc] init];
-        }else{
-            vc = [[UIViewController alloc] init];
-        }
+        vc = [[SSXViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:titleArr[i] image:[UIImage imageNamed:imageArr[i]] selectedImage:[UIImage imageNamed:imageSelArr[i]]];
         [navArr addObject:nav];
