@@ -92,7 +92,9 @@
     if (_ssxTabBarStyle == SSXTabBarStyleScroll) {
         UIViewController *didSelectViewController = (UIViewController *)self.viewControllers[selectedIndex];
         if ([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
-            [self.delegate tabBarController:self shouldSelectViewController:didSelectViewController];
+            if (![self.delegate tabBarController:self shouldSelectViewController:didSelectViewController]) {
+                return;
+            }
         }
         [super setSelectedIndex:selectedIndex];
         if ([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)]) {
@@ -144,6 +146,10 @@
     }
 }
 
-
+- (void)dealloc{
+    for (SSXTabBarButton *tabBarBtn in _tabBarArr) {
+        [tabBarBtn.tabBarItem removeObserver:self forKeyPath:@"badgeValue" context:nil];
+    }
+}
 
 @end
